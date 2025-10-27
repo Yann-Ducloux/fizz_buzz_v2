@@ -14,7 +14,7 @@ class FizzbuzzTest {
     void fizzbuzz_should_be_return_same_number(int number) {
         var numberExpected = String.valueOf(number);
         Fizzbuzz fizzbuzz = new Fizzbuzz();
-        var numberActual = fizzbuzz.calculation(number);
+        var numberActual = fizzbuzz.convert(number);
         assertEquals(numberExpected, numberActual,
                 () -> "Pour le nombre " + number + ", on attendait '" + numberExpected + "', mais on a eu '" + numberActual + "'");
     }
@@ -25,7 +25,7 @@ class FizzbuzzTest {
     void fizzbuzz_should_be_return_fizz_when_is_divisible_or_contains_by_three(int number) {
         var numberExpected = "Fizz";
         Fizzbuzz fizzbuzz = new Fizzbuzz();
-        var numberActual = fizzbuzz.calculation(number);
+        var numberActual = fizzbuzz.convert(number);
         assertEquals(numberExpected, numberActual,
                 () -> "Pour le nombre " + number + ", on attendait '" + numberExpected + "', mais on a eu '" + numberActual + "'");
     }
@@ -36,7 +36,7 @@ class FizzbuzzTest {
     void fizzbuzz_should_be_return_buzz_when_is_divisible_or_contains_by_five(int number) {
         var numberExpected = "Buzz";
         Fizzbuzz fizzbuzz = new Fizzbuzz();
-        var numberActual = fizzbuzz.calculation(number);
+        var numberActual = fizzbuzz.convert(number);
         assertEquals(numberExpected, numberActual,
                 () -> "Pour le nombre " + number + ", on attendait '" + numberExpected + "', mais on a eu '" + numberActual + "'");
     }
@@ -47,7 +47,7 @@ class FizzbuzzTest {
     void fizzbuzz_should_be_return_fizzbuzz_when_is_divisible_by_five_and_three(int number) {
         var numberExpected = "FizzBuzz";
         Fizzbuzz fizzbuzz = new Fizzbuzz();
-        var numberActual = fizzbuzz.calculation(number);
+        var numberActual = fizzbuzz.convert(number);
         assertEquals(numberExpected, numberActual,
                 () -> "Pour le nombre " + number + ", on attendait '" + numberExpected + "', mais on a eu '" + numberActual + "'");
     }

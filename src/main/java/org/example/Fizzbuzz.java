@@ -10,14 +10,15 @@ public class Fizzbuzz {
     public static final String FIZZ_BUZZ = FIZZ + BUZZ;
     public static final String THREE = "3";
     public static final String FIVE = "5";
+    public static final int START_LIST_FIZZ_BUZZ = 1;
 
     public void compute(int number) {
-        for (int i = 1; i <= number; i++) {
-            System.out.println(i + " => " + calculation(i));
+        for (int i = START_LIST_FIZZ_BUZZ; i <= number; i++) {
+            System.out.println(i + " => " + convert(i));
         }
     }
 
-    public String calculation(int number) {
+    public String convert(int number) {
         String numberString = String.valueOf(number);
         if(isAMultipleOf(MULTIPLE_OF_THREE, number) && isAMultipleOf(MULTIPLE_OF_FIVE, number)) {
             return FIZZ_BUZZ;
