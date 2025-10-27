@@ -12,7 +12,17 @@ class FizzbuzzTest {
     @ValueSource(ints = {1, 2})
     @DisplayName("Test FizzBuzz pour les nombres qui retournent le même nombre")
     void fizzbuzz_should_be_return_same_number(int number) {
-        var numberExpected = number;
+        var numberExpected = String.valueOf(number);
+        Fizzbuzz fizzbuzz = new Fizzbuzz();
+        var numberActual = fizzbuzz.calcul(number);
+        assertEquals(numberExpected, numberActual,
+                () -> "Pour le nombre " + number + ", on attendait '" + numberExpected + "', mais on a eu '" + numberActual + "'");
+    }
+    @ParameterizedTest(name = "Le nombre {0} doit retourner 'Fizz'")
+    @ValueSource(ints = {3, 6})
+    @DisplayName("Test FizzBuzz pour les nombres qui retournent 'Fizz'")
+    void fizzbuzz_should_be_return_fizz_when_is_divisible_by_three(int number) {
+        var numberExpected = "Fizz";
         Fizzbuzz fizzbuzz = new Fizzbuzz();
         var numberActual = fizzbuzz.calcul(number);
         assertEquals(numberExpected, numberActual,
