@@ -5,7 +5,7 @@ Imaginez la scène. Vous avez onze ans et cinq minutes avant la fin de la leçon
 Votre professeur commence à vous interroger les uns à la suite des autres. Vos camarades entonnent joyeusement “un!”, “deux!”, “Fizz!”, “quatre!”, “Buzz!”… Jusqu’à ce qu’il décide de son plein gré de vous pointer, vous. En vous fixant de son regard d’acier… Le temps retient son souffle, votre bouche s’assèche et vos mains sont de plus en plus moites. Vous finissez tant bien que mal par articuler “Fizz!”.
 Vous échappez de peu à une mort tragique, et l’implacable main du maître vient pointer un autre élève.
 
-Biensûr, pour éviter d’avoir honte devant toute votre classe, vous devez vous procurer la séquence complète pour savoir quoi dire. Vous êtes dans une classe de 33 élèves, et le professeur à le temps d’interroger chaque élève trois fois avant que la sonnerie ne retentisse. La prochaine leçon est Vendredi. Vous n’avez pas de temps à perdre.
+Bien sûr, pour éviter d’avoir honte devant toute votre classe, vous devez vous procurer la séquence complète pour savoir quoi dire. Vous êtes dans une classe de 33 élèves, et le professeur à le temps d’interroger chaque élève trois fois avant que la sonnerie ne retentisse. La prochaine leçon est Vendredi. Vous n’avez pas de temps à perdre.
 
 Vous devez écrire un programme affichant les nombres de 1 à 100.
 
@@ -52,5 +52,5 @@ Exemples
 ```
 
 ### Étape 3
-Construire une fonction compute qui affiche la suite de correspondance de 1 au nombre souhaiter par l'utilisateur.
+Construire une fonction compute qui affiche la suite de correspondance de 1 au nombre souhaité par l'utilisateur.
 
