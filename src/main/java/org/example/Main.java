@@ -1,10 +1,13 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     static void main() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ecrire un nombre: ");
+        var nombre = sc.nextInt();
         Fizzbuzz fizzbuzz = new Fizzbuzz();
-        fizzbuzz.compute(100);
+        fizzbuzz.compute(nombre);
     }
 }
