@@ -52,5 +52,5 @@ Exemples
 ```
 
 ### Étape 3
-Construire une fonction compute qui affiche la suite de correspondance de 1 à 100.
+Construire une fonction compute qui affiche la suite de correspondance de 1 au nombre souhaiter par l'utilisateur.
 
