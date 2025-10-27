@@ -28,4 +28,14 @@ class FizzbuzzTest {
         assertEquals(numberExpected, numberActual,
                 () -> "Pour le nombre " + number + ", on attendait '" + numberExpected + "', mais on a eu '" + numberActual + "'");
     }
+    @ParameterizedTest(name = "Le nombre {0} doit retourner 'Buzz'")
+    @ValueSource(ints = {5, 10})
+    @DisplayName("Test FizzBuzz pour les nombres qui retournent 'Buzz'")
+    void fizzbuzz_should_be_return_buzz_when_is_divisible_by_five(int number) {
+        var numberExpected = "Buzz";
+        Fizzbuzz fizzbuzz = new Fizzbuzz();
+        var numberActual = fizzbuzz.calcul(number);
+        assertEquals(numberExpected, numberActual,
+                () -> "Pour le nombre " + number + ", on attendait '" + numberExpected + "', mais on a eu '" + numberActual + "'");
+    }
 }
