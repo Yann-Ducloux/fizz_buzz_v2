@@ -8,6 +8,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FizzbuzzTest {
+
     @ParameterizedTest(name = "Le nombre {0} doit retourner le même nombre")
     @ValueSource(ints = {1, 2})
     @DisplayName("Test FizzBuzz pour les nombres qui retournent le même nombre")
@@ -18,6 +19,7 @@ class FizzbuzzTest {
         assertEquals(numberExpected, numberActual,
                 () -> "Pour le nombre " + number + ", on attendait '" + numberExpected + "', mais on a eu '" + numberActual + "'");
     }
+
     @ParameterizedTest(name = "Le nombre {0} doit retourner 'Fizz'")
     @ValueSource(ints = {3, 6})
     @DisplayName("Test FizzBuzz pour les nombres qui retournent 'Fizz'")
@@ -28,11 +30,23 @@ class FizzbuzzTest {
         assertEquals(numberExpected, numberActual,
                 () -> "Pour le nombre " + number + ", on attendait '" + numberExpected + "', mais on a eu '" + numberActual + "'");
     }
+
     @ParameterizedTest(name = "Le nombre {0} doit retourner 'Buzz'")
     @ValueSource(ints = {5, 10})
     @DisplayName("Test FizzBuzz pour les nombres qui retournent 'Buzz'")
     void fizzbuzz_should_be_return_buzz_when_is_divisible_by_five(int number) {
         var numberExpected = "Buzz";
+        Fizzbuzz fizzbuzz = new Fizzbuzz();
+        var numberActual = fizzbuzz.calcul(number);
+        assertEquals(numberExpected, numberActual,
+                () -> "Pour le nombre " + number + ", on attendait '" + numberExpected + "', mais on a eu '" + numberActual + "'");
+    }
+
+    @ParameterizedTest(name = "Le nombre {0} doit retourner 'FizzBuzz'")
+    @ValueSource(ints = {15, 30})
+    @DisplayName("Test FizzBuzz pour les nombres qui retournent 'FizzBuzz'")
+    void fizzbuzz_should_be_return_fizzbuzz_when_is_divisible_by_five_and_three(int number) {
+        var numberExpected = "FizzBuzz";
         Fizzbuzz fizzbuzz = new Fizzbuzz();
         var numberActual = fizzbuzz.calcul(number);
         assertEquals(numberExpected, numberActual,
